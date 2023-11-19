@@ -67,4 +67,17 @@ rules:
   resources:
   - "statefulsets"
 
+##
+## Extra rules used by the controller manager
+##
+- apiGroups: ["networking.k8s.io"]
+  resources: ["networkpolicies", "ingressclasses"]
+  verbs: ["create", "delete", "patch", "update", "get", "list", "watch"]
+- apiGroups: [""]
+  resources: ["limitranges", "resourcequotas"]
+  verbs: ["create", "delete", "patch", "update", "get", "list", "watch"]
+- apiGroups: ["rbac.authorization.k8s.io"]
+  resources: ["clusterroles", "clusterrolebindings"]
+  verbs: ["create", "delete", "patch", "update", "get", "list", "watch"]
+
 #+kubebuilder:scaffold:rules
