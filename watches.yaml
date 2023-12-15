@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: storage.openloft.cn
+  version: v1
+  kind: VirtualCluster
+  chart: helm-charts/vcluster
+#+kubebuilder:scaffold:watch
